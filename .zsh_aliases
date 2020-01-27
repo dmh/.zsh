@@ -8,8 +8,6 @@ alias cd4='cd ../../../..'
 
 
 # git
-alias kk='gitk --all'
-
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
@@ -25,6 +23,11 @@ alias gm='git merge'
 alias goto='git checkout'
 
 
+# git log GUI
+alias kk='gitk --all'
+
+
+# git log
 alias gl='git log --graph --decorate=short --color --format=format:"%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %x09%C(black)%an: %s %C(reset)"'
 alias gll='git log -n 20 --graph --abbrev-commit'
 #==================================================================
