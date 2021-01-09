@@ -10,6 +10,7 @@ alias cd4='cd ../../../..'
 # git
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gcsm='git commit -s -m'
 alias gcam='git commit -a -m'
 
 alias gt='git tag'

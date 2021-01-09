@@ -85,3 +85,5 @@ compinit -i
 # edd custom prompt
 # shellcheck source=../zsh_prompt/prompt.sh
 source "$HOME"/zsh_prompt/prompt.sh
+
+export GPG_TTY=$(tty)
