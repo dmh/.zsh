@@ -1,10 +1,17 @@
 # shellcheck shell=bash
 
 export PATH=$HOME/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ -f "$HOME"/.zsh/.zsh_aliases ]; then
     # shellcheck source=.zsh_aliases
     source "$HOME"/.zsh/.zsh_aliases
+fi
+
+if [ -f "$HOME"/.zsh_aliases.local ]; then
+    # shellcheck source=.zsh_aliases
+    source "$HOME"/.zsh_aliases.local
 fi
 
 # enable colors
@@ -83,7 +90,7 @@ compinit -i
 
 
 # edd custom prompt
-# shellcheck source=../zsh_prompt/prompt.sh
-source "$HOME"/zsh_prompt/prompt.sh
+# shellcheck source=../zsh-prompt/prompt.sh
+source "$HOME"/zsh-prompt/prompt.sh
 
 export GPG_TTY=$(tty)

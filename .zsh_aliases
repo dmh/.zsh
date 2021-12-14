@@ -9,10 +9,6 @@ alias cd4='cd ../../../..'
 
 # git
 alias gc='git commit'
-alias gcm='git commit -m'
-alias gcsm='git commit -s -m'
-alias gcam='git commit -a -m'
-
 alias gt='git tag'
 alias gr='git remote'
 alias ga='git add'
@@ -29,7 +25,7 @@ alias kk='gitk --all'
 
 
 # git log
-alias gl='git log --graph --decorate=short --color --format=format:"%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %x09%C(black)%an: %s %C(reset)"'
+alias gl='git log --graph --oneline --decorate=short --color --format=format:"%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %x09%C(black)%an: %s %C(reset)"'
 alias gll='git log -n 20 --graph --abbrev-commit'
 #==================================================================
 
@@ -62,5 +58,5 @@ alias ds='docker system'
 alias dsp='docker system prune'
 alias dvp='docker volume prune'
 
-alias dc='docker-compose'
+alias dc='docker compose'
 #==================================================================
