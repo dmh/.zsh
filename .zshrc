@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-export PATH=$HOME/bin:$PATH
+# export PATH=$HOME/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -81,7 +81,7 @@ zstyle ':completion:*' list-colors ''
 # add completions
 
 # shellcheck disable=SC2206
-fpath=("$HOME"/.zsh/completion $fpath)
+# fpath=("$HOME"/.zsh/completion $fpath)
 # ====================================
 
 
@@ -93,4 +93,6 @@ compinit -i
 # shellcheck source=../zsh-prompt/prompt.sh
 source "$HOME"/zsh-prompt/prompt.sh
 
-export GPG_TTY=$(tty)
+# export GPG_TTY=$(tty)
+
+# eval "$(/opt/homebrew/bin/brew shellenv)"
