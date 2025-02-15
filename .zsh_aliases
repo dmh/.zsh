@@ -18,5 +18,5 @@ alias gb='git branch'
 alias gm='git merge'
 alias goto='git checkout'
 alias gcm='git commit -m'
-alias gl='git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset" --abbrev-commit'
 #==================================================================
