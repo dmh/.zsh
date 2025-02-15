@@ -6,7 +6,6 @@ alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 #==================================================================
 
-
 # git
 alias gc='git commit'
 alias gt='git tag'
@@ -18,45 +17,6 @@ alias gs='git status'
 alias gb='git branch'
 alias gm='git merge'
 alias goto='git checkout'
-
-
-# git log GUI
-alias kk='gitk --all'
-
-
-# git log
-alias gl='git log --graph --oneline --decorate=short --color --format=format:"%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %x09%C(black)%an: %s %C(reset)"'
-alias gll='git log -n 20 --graph --abbrev-commit'
-#==================================================================
-
-
-# VS Code
-alias c='code .'
-#==================================================================
-
-
-# composer
-alias co='composer'
-#==================================================================
-
-
-# npm
-alias nls='npm ls -g --depth=0'
-alias nlsl='npm ls --depth=0'
-alias nout='npm outdated -g --depth=0'
-alias noutl='npm outdated --depth=0'
-#==================================================================
-
-
-# docker
-alias d='docker'
-alias di='docker images'
-alias dn='docker network'
-alias dv='docker volume'
-alias ds='docker system'
-
-alias dsp='docker system prune'
-alias dvp='docker volume prune'
-
-alias dc='docker compose'
+alias gcm='git commit -m'
+alias gl='git log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit'
 #==================================================================

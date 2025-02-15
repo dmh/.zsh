@@ -1,16 +1,12 @@
-# shellcheck shell=bash
-
-# export PATH=$HOME/bin:$PATH
+# nvm setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ -f "$HOME"/.zsh/.zsh_aliases ]; then
-    # shellcheck source=.zsh_aliases
     source "$HOME"/.zsh/.zsh_aliases
 fi
 
 if [ -f "$HOME"/.zsh_aliases.local ]; then
-    # shellcheck source=.zsh_aliases
     source "$HOME"/.zsh_aliases.local
 fi
 
@@ -53,19 +49,16 @@ fi
 # Save command history
 HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=2000
-# shellcheck disable=SC2034
 SAVEHIST=1000
 setopt INC_APPEND_HISTORY # adds commands as they are typed, not at shell exit
 setopt HIST_FIND_NO_DUPS # ignore duplicates when searching
 setopt HIST_REDUCE_BLANKS # removes blank lines from history
-# setopt HIST_IGNORE_DUPS # do not store duplications
 
 setopt HIST_VERIFY # show command with history expansion to user before running it
 setopt HIST_EXPIRE_DUPS_FIRST # delete duplicates first when HISTFILE size exceeds HISTSIZE
-# setopt SHARE_HISTORY # share command history data
 # ====================================
 
-
+# autoload -U compinit; compinit
 autoload -Uz compaudit compinit
 
 # shows completion suggests in a menu
@@ -76,23 +69,14 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 
 zstyle ':completion:*' list-colors ''
 
-
-# ====================================
-# add completions
-
-# shellcheck disable=SC2206
-# fpath=("$HOME"/.zsh/completion $fpath)
-# ====================================
-
-
 compaudit
 compinit -i
 
-
 # edd custom prompt
-# shellcheck source=../zsh-prompt/prompt.sh
 source "$HOME"/zsh-prompt/prompt.sh
 
-# export GPG_TTY=$(tty)
-
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+# bun completions
+[ -s "/Users/dmh/.bun/_bun" ] && source "/Users/dmh/.bun/_bun"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
