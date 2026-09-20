@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# === PATH CONFIGURATION ===
+# Machine-specific PATH entries. This file is ignored by git.
+#
+# Format: export PATH="<new-bin-dir>:$PATH"
+# The entry at the TOP wins if there are conflicts.
+
+# === EXAMPLE COMPILED PATHS ===
+# export PATH="$HOME/vscode/bun/packages/updot/dist:$PATH"
+# export PATH="$HOME/vscode/bun/packages/vlantest/dist:$PATH"
